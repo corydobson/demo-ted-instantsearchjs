@@ -1,0 +1,12 @@
+{
+  "name": "updateConfig",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "algoliasearch": "^3.20.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

@@ -1,0 +1,483 @@
+/*****************/
+/*** HOME PAGE ***/
+/*****************/
+#search_bg {
+	background: url("./ted_home.jpg") center top no-repeat;
+	min-height: 1500px;
+	width: 1280px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+#input_area {
+	width: 300px;
+	height: 44px;
+	position: relative;
+	top: 92px;
+	left: 794px;
+	z-index: 2;
+}
+
+#input_area:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+
+
+/**********************/
+/*** SEARCH OVERLAY ***/
+/**********************/
+#search_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	min-height: 1500px;
+	background: white;
+	z-index: 3;
+}
+
+#search_overlay.hidden {
+	pointer-events: none;
+}
+
+#exit_search {
+	padding-top: 10px;
+	display: block;
+	float: right;
+	margin-right: 105px;
+}
+
+#exit_search span {
+	text-align: right;
+	float: right;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+
+.search-close {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	color: white;
+	position: absolute;
+}
+
+.search-close::before,
+.search-close::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100px;
+	top: 10px;
+	left: 50%;
+	border-radius: 3px;
+	opacity: 0.2;
+	background: #000;
+}
+
+.search-close:hover.search-close::before,
+.search-close:hover.search-close::after {
+	opacity: 1;
+}
+
+.search-close::before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.search-close::after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	;
+}
+
+#content {
+	min-height: 1000px;
+	border-top: 2px solid #F2F2F2;
+}
+
+.page-header {
+	width: 100%;
+	border-bottom: 2px solid #F2F2F2;
+	padding-bottom: 8px;
+	margin-top: 10px;
+}
+
+.page-header h2 {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+#main_container {
+	margin-bottom: 30px;
+}
+
+
+
+/********************/
+/*** SEARCH INPUT ***/
+/********************/
+#input_container {
+	padding: 15px 0 0 0;
+}
+
+#search_input, #search_input:hover, #search_input:active, #search_input:focus {
+	border: none !important;
+	outline: 0px !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-webkit-appearance: none !important;
+}
+
+#search_input {
+	height: 130px;
+	font-size: 65px;
+	padding-bottom: 16px;
+}
+
+
+
+/*********************/
+/*** TALKS RESULTS ***/
+/*********************/
+#talks_results {
+	min-height: 800px;
+	margin: 0 0 20px;
+}
+.found_in {
+	color: #AAA;
+	float: right;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.talk_stats{
+	display: inline-block;
+}
+
+.talk-grid__tile__content:hover .talk-grid__tile__overlay {
+	background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0));
+}
+
+.talk-grid__tile__details {
+	opacity: 1;
+}
+
+.item {
+	background: black;
+	border: 2px solid white;
+}
+
+.item.w1 {
+	width: 282.5px;
+	height: 211.5px;
+}
+
+.item.w1 .talk-grid__tile__details__speaker {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.item.w1 .talk-grid__tile__details__title {
+	font-size: 20px;
+	line-height: 1.1;
+	margin: 6px 0 3px;
+}
+
+.item.w2 {
+	width: 565px;
+	height: 423.75px;
+}
+
+.item.w2 .talk-grid__tile__details__speaker {
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.item.w2 .talk-grid__tile__details__title {
+	font-size: 44px;
+	line-height: 1.05;
+	margin: 12px 0 6px;
+}
+
+.item em {
+	font-style: normal;
+	background: rgba(230, 43, 30, 0.55);
+}
+
+
+
+/**************************/
+/*** TALKS FACETS +SORT ***/
+/**************************/
+#talks_filters_bloc {
+	padding-top: 2px;
+}
+
+#facets em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+#facets li {
+	padding: 0 20px 0 0;
+	margin: 0;
+	color: #555;
+}
+
+#facets li span.title {
+	font-style: italic;
+}
+
+#facets li a {
+	background: none;
+	padding: 0;
+	margin: 0;
+	color: #555;
+}
+
+#facets .dropdown-menu li {
+	padding: 0;
+	border-top: 1px solid #eee;
+}
+
+#facets .dropdown-menu li a {
+	padding: 5px 10px;
+	display: block;
+	text-transform: capitalize;
+}
+
+#facets .dropdown-menu li:hover {
+	background: #eee;
+}
+
+#facets .dropdown-menu li a:hover {
+	text-decoration: none;
+}
+
+#facets .dropdown-menu li .active-facet:hover {
+	color: red;
+}
+
+#facets #duration_dropdown .dropdown-menu li:first-child {
+	border-top: none;
+}
+
+#facets #date_dropdown     .dropdown-menu li:first-child {
+	border-top: none;
+}
+}
+
+#sorts li span.title {
+	font-style: italic;
+}
+
+#facets li, #facets li a, #sorts li, #sorts li select {
+	font-size: 15px;
+}
+
+#sorts li {
+	margin: 0;
+	color: #555;
+}
+#sorts li.sort_label {
+	padding-left: 0;
+}
+.tight {
+	width: 110px;
+	margin-left: 10px;
+}
+
+#sorts select {
+	position: relative;
+	top: -5px;
+}
+
+.ais-current-refined-values--list{
+	display: inline-flex;
+}
+
+.ais-current-refined-values--clear-all{
+	display: inline-flex;
+}
+
+/************************/
+/*** SPEAKERS RESULTS ***/
+/************************/
+#speakers_results {
+	margin-bottom: 30px;
+}
+
+.speaker_bloc {
+	text-align: left;
+	margin-bottom: 10px;
+	min-height: 80px;
+	-webkit-transition: background 100ms;
+    transition: background 100ms;
+}
+
+.speaker_bloc:hover {
+	background: #F0F0F0;
+}
+
+.speaker_bloc .image_round {
+	overflow: hidden;
+	border-radius: 100%;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 4px;
+}
+
+.speaker_img {
+	margin-bottom: 4px;
+	position: relative;
+	height: 80px;
+	left: -7px;
+}
+
+.speaker_bloc p {
+	color: #333;
+	margin: 4px 0;
+}
+
+.speaker_bloc p.name {
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 9px;
+}
+
+.speaker_bloc p.description {
+	font-size: 13px;
+	font-style: italic;
+	margin-top: -6px;
+}
+
+.speaker_bloc p.nb_talks {
+	font-size: 12px;
+	color: #999;
+}
+
+.speaker_bloc em {
+	font-style: normal;
+	background: rgba(228, 228, 228, 1);
+}
+
+
+
+/*************************/
+/*** PLAYLISTS RESULTS ***/
+/*************************/
+.playlist_bloc {
+	border-bottom: 2px solid #F2F2F2;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+}
+
+.playlist_bloc:hover {
+	background: #F0F0F0;
+	-webkit-transition: background 100ms;
+    transition: background 100ms;
+}
+
+.playlist_bloc a:hover {
+	text-decoration: none;
+}
+
+.playlist_bloc p {
+	text-decoration: none;
+	color: #333;
+	font-size: 14px;
+	margin: 3px 0;
+}
+
+.playlist_bloc p.title {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.playlist_bloc p.description {
+	font-size: 12px;
+}
+
+.playlist_bloc p em {
+	font-style: normal;
+	background: rgba(228, 228, 228, 1);
+}
+
+p.no_result {
+	width: 80%;
+	text-align: center;
+	color: #555;
+	font-size: 20px;
+	margin: 50px auto;
+	color: #999;
+	font-style: italic;
+}
+
+p.no_result.small {
+	margin: 10px auto 30px;
+	font-size: 16px;
+}
+
+.sbx-sffv__submit, .sbx-sffv__reset{
+	display: none;
+}
+
+.sbx-sffv__input{
+	width: 160px;
+	margin: 10px;
+	display: block;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.icon_close-small:before{
+	-webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /*for IE*/
+}
+.refinement-name{
+	max-width: 130px;
+	overflow-x: none;
+	display: inline-flex;
+}
+
+.pull-right{
+	float: right;
+  margin-top: 2.5px;
+}
+.duration_facet_link:first-letter{
+	text-transform: capitalize;
+}
+.stub{
+	color: black;
+}
+.active_refinements_bubble{
+	background: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  padding: 2px 6px 2px 6px;
+  margin: 1px 2px 0px 0;
+  border: 1px solid #DDD;
+  border-radius: 32px;
+}
