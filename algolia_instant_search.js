@@ -5,7 +5,7 @@ $(function () {
    *  ====== INITIALIZATION ======
    *  ============================ */
 
-  var indexName = 'talks';
+  var indexName = 'talks_popularity_score_desc';
   var appId = 'I3JU913ICM';
   var apiKey = '7bbc002b560942a366ca70ee403919d8';
 
@@ -314,8 +314,8 @@ $(function () {
         item: "sort_option"
       },
       indices: [
-        {name: 'talks', label: 'Most Viewed'},
         {name: 'talks_popularity_score_desc', label: 'Most Popular'},
+        {name: 'talks', label: 'Most Viewed'},
         {name: 'talks_viewed_count_desc', label: 'Newest first'},
         {name: 'talks_date_asc', label: 'Oldest first'},
         {name: 'talks_beautiful_rating_desc', label: 'Most Beautiful'},
